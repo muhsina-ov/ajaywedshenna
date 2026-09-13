@@ -33,30 +33,37 @@ export default function Footer() {
 
   return (
     <>
-      <section id="gallery" className="gallery" aria-label="Ajay and Henna photo gallery">
-        {GALLERY.map((src, index) => (
-          <motion.figure
-            key={src}
-            className={`gallery-item gallery-item-${index + 1}`}
-            initial={reduceMotion ? false : { opacity: 0, scale: 0.97 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.6, delay: index * 0.06 }}
-          >
-            <motion.img
-              src={src}
-              alt={`Ajay and Henna, moment ${index + 1}`}
-              loading="lazy"
-              whileHover={reduceMotion ? undefined : { scale: 1.055 }}
-              transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
-            />
-          </motion.figure>
-        ))}
+      <section id="gallery" className="gallery" aria-label="Henna and Ajay photo gallery">
+        <motion.header className="gallery-intro" initial={reduceMotion ? false : { opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.5 }} transition={{ duration: 0.7 }}>
+          <span>Collected moments</span>
+          <h2>Scenes from our story</h2>
+          <div className="invitation-divider" aria-hidden="true"><span />❦<span /></div>
+        </motion.header>
+        <div className="gallery-grid">
+          {GALLERY.map((src, index) => (
+            <motion.figure
+              key={src}
+              className={`gallery-item gallery-item-${index + 1}`}
+              initial={reduceMotion ? false : { opacity: 0, scale: 0.97 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{ duration: 0.6, delay: index * 0.06 }}
+            >
+              <motion.img
+                src={src}
+                alt={`Henna and Ajay, moment ${index + 1}`}
+                loading="lazy"
+                whileHover={reduceMotion ? undefined : { scale: 1.045 }}
+                transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+              />
+            </motion.figure>
+          ))}
+        </div>
       </section>
 
       <footer className="closing">
-        <AnimatedAsset className="closing-floral closing-floral-left" src="/assets/florals/grand-corner.webp" from="left" drift={10} duration={9} />
-        <AnimatedAsset className="closing-floral closing-floral-right" src="/assets/florals/grand-corner.webp" from="right" delay={0.14} drift={8} duration={8} />
+        <AnimatedAsset className="closing-floral closing-floral-left" src="/assets/florals/emerald-rose-corner.webp" from="left" drift={10} duration={9} />
+        <AnimatedAsset className="closing-floral closing-floral-right" src="/assets/florals/emerald-rose-corner.webp" from="right" delay={0.14} drift={8} duration={8} />
         <AnimatedAsset className="closing-wreath" src="/assets/florals/open-wreath.webp" from="bloom" delay={0.2} drift={5} rotate={0.5} duration={10} />
         <AnimatedAsset className="closing-silk" src="/assets/florals/silk-ribbon.webp" from="bottom" delay={0.25} drift={12} rotate={0.5} duration={11} />
 
@@ -68,10 +75,10 @@ export default function Footer() {
           transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
         >
           <div className="crest crest-small" aria-hidden="true">
-            <span>A</span><i /><span>H</span>
+            <span>H</span><i /><span>A</span>
           </div>
           <p>With Love &amp; Joy</p>
-          <h2>{COUPLE.groomShort} <em>&amp;</em> {COUPLE.brideShort}</h2>
+          <h2>{COUPLE.brideShort} <em>&amp;</em> {COUPLE.groomShort}</h2>
           <strong>04 October 2026</strong>
 
           {/* Royal Highlighted Countdown & Calendar Card */}

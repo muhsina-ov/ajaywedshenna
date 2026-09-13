@@ -1,6 +1,6 @@
-# Ajay & Henna Wedding Invitation
+# Henna & Ajay Wedding Invitation
 
-A digital wedding invitation for Ajay Babu & Henna Prathap. Built with React, Vite, and Tailwind CSS.
+A digital wedding invitation for Henna Prathap & Ajay Babu. Built with React, Vite, and Tailwind CSS.
 
 ## Getting Started
 

@@ -36,7 +36,7 @@ export const OCCASIONS = [
 
 export const STORY = {
   title: 'Where Two Stories Meet',
-  subtitle: 'The Story of Ajay & Henna',
+  subtitle: 'The Story of Henna & Ajay',
   bride: {
     name: 'Henna',
     role: 'The Bride',
@@ -74,13 +74,13 @@ export function generateICS() {
     {
       start: CEREMONY_DATE,
       end: new Date(CEREMONY_DATE.getTime() + 2 * 60 * 60 * 1000),
-      title: 'Ajay & Henna - Sacrament of Matrimony',
+      title: 'Henna & Ajay - Sacrament of Matrimony',
       location: 'Little Flower Syro-Malabar Church, Kurumassery',
     },
     {
       start: new Date('2026-10-04T18:30:00+05:30'),
       end: new Date('2026-10-04T22:30:00+05:30'),
-      title: 'Ajay & Henna - Wedding Reception',
+      title: 'Henna & Ajay - Wedding Reception',
       location: 'Adlux International Convention Centre, Angamaly',
     },
   ]
@@ -94,12 +94,12 @@ export function generateICS() {
     'END:VEVENT',
   ])
 
-  const ics = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//AjayHenna//Wedding//EN', ...calendarEvents, 'END:VCALENDAR'].join('\r\n')
+  const ics = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//HennaAjay//Wedding//EN', ...calendarEvents, 'END:VCALENDAR'].join('\r\n')
   const blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' })
   const url = URL.createObjectURL(blob)
   const anchor = document.createElement('a')
   anchor.href = url
-  anchor.download = 'ajay-weds-henna.ics'
+  anchor.download = 'henna-weds-ajay.ics'
   anchor.click()
   URL.revokeObjectURL(url)
 }

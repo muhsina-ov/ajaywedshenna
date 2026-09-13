@@ -82,7 +82,7 @@ export function HeroLayerStack({ scrollYProgress }) {
         >
           <img
             src={HERO_LAYERS.coupleCutout}
-            alt="Ajay and Henna"
+            alt="Henna and Ajay"
             draggable={false}
             className="w-full h-auto select-none"
             style={{

@@ -9,8 +9,8 @@ export default function Story() {
 
   return (
     <section ref={ref} className="story" aria-labelledby="story-heading">
-      <AnimatedAsset className="story-floral-corner" src="/assets/florals/grand-corner.webp" from="left" drift={8} duration={8.5} />
-      <AnimatedAsset className="story-floral-spray" src="/assets/florals/side-spray.webp" from="top" delay={0.12} drift={11} duration={9} />
+      <AnimatedAsset className="story-floral-corner" src="/assets/florals/emerald-rose-corner.webp" from="left" drift={8} duration={8.5} />
+      <AnimatedAsset className="story-floral-spray" src="/assets/florals/emerald-rose-corner.webp" from="top" delay={0.12} drift={11} duration={9} />
       <AnimatedAsset className="story-silk" src="/assets/florals/silk-ribbon.webp" from="right" delay={0.18} drift={12} rotate={0.6} duration={10} />
       <motion.div className="story-copy" initial={reduceMotion ? false : { opacity: 0, y: 22 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.75, delay: 0.1 }}>
         <h2 id="story-heading">{STORY.title}</h2>

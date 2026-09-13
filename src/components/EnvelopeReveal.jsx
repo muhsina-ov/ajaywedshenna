@@ -126,17 +126,28 @@ export default function EnvelopeReveal({ onOpen }) {
           exit={{ opacity: 0, scale: 1.04 }}
           transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
         >
-          <img className="gate-floral gate-floral-left" src="/assets/florals/grand-corner.webp" alt="" />
-          <img className="gate-floral gate-floral-right" src="/assets/florals/grand-corner.webp" alt="" />
+          <img className="gate-floral gate-floral-left" src="/assets/florals/emerald-rose-corner.webp" alt="" />
+          <img className="gate-floral gate-floral-right" src="/assets/florals/emerald-rose-corner.webp" alt="" />
           <img className="gate-wreath" src="/assets/florals/open-wreath.webp" alt="" />
           <img className="gate-silk" src="/assets/florals/silk-ribbon.webp" alt="" />
+
+          <motion.header
+            className="gate-intro"
+            initial={reduceMotion ? false : { opacity: 0, y: -14 }}
+            animate={{ opacity: phase === 'sealed' ? 1 : 0, y: phase === 'sealed' ? 0 : -10 }}
+            transition={{ duration: 0.65, delay: 0.15 }}
+          >
+            <span>Wedding invitation</span>
+            <h1>Henna <em>&amp;</em> Ajay</h1>
+            <p>04 · October · 2026</p>
+          </motion.header>
 
           <div className="envelope-scene">
             <motion.button
               type="button"
               className={`envelope-realistic ${phase}`}
               onClick={openInvitation}
-              aria-label="Open Ajay and Henna's royal wedding invitation"
+              aria-label="Open Henna and Ajay's royal wedding invitation"
               initial={reduceMotion ? false : { opacity: 0, y: 32, scale: 0.95 }}
               animate={{
                 opacity: 1,
@@ -166,18 +177,21 @@ export default function EnvelopeReveal({ onOpen }) {
                   ease: [0.16, 1, 0.3, 1],
                 }}
               >
-                <picture className="card-artwork-picture">
-                  <source srcSet="/assets/decorations/wedding-letter-card.webp" type="image/webp" />
-                  <img
-                    src="/assets/decorations/wedding-letter-card.png"
-                    alt="Wedding Invitation: Together with their families, Ajay Babu unites in heart and soul with Henna Prathap, Sunday, October 4, 2026"
-                    className="card-artwork-img"
-                    width="1800"
-                    height="1200"
-                    loading="eager"
-                    decoding="sync"
-                  />
-                </picture>
+                <div
+                  className="envelope-letter-art"
+                  role="img"
+                  aria-label="Wedding invitation for Henna Prathap and Ajay Babu, Sunday, October 4, 2026"
+                >
+                  <img className="letter-floral letter-floral-tl" src="/assets/florals/emerald-rose-corner.webp" alt="" />
+                  <img className="letter-floral letter-floral-br" src="/assets/florals/emerald-rose-corner.webp" alt="" />
+                  <div className="letter-inner-frame">
+                    <span className="letter-kicker">Wedding invitation</span>
+                    <div className="letter-flourish" aria-hidden="true"><i />❦<i /></div>
+                    <p>Together with their families</p>
+                    <h2><span>Henna Prathap</span><em>&amp;</em><span>Ajay Babu</span></h2>
+                    <strong>Sunday · 04 October · 2026</strong>
+                  </div>
+                </div>
               </motion.div>
 
               {/* Front Pocket Flaps (Left, Right, Bottom with rich paper grain & gold foil bevel) */}
@@ -206,19 +220,19 @@ export default function EnvelopeReveal({ onOpen }) {
 
                   {/* Rich Paper Gradients */}
                   <linearGradient id="paperGradLeft" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#fdfefe" />
-                    <stop offset="85%" stopColor="#ebf2f8" />
-                    <stop offset="100%" stopColor="#deebf3" />
+                    <stop offset="0%" stopColor="#fffaf1" />
+                    <stop offset="85%" stopColor="#f1e6d4" />
+                    <stop offset="100%" stopColor="#e3d2b8" />
                   </linearGradient>
                   <linearGradient id="paperGradRight" x1="100%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" stopColor="#fdfefe" />
-                    <stop offset="85%" stopColor="#e8f0f7" />
-                    <stop offset="100%" stopColor="#dbe8f2" />
+                    <stop offset="0%" stopColor="#fffaf1" />
+                    <stop offset="85%" stopColor="#efe3d0" />
+                    <stop offset="100%" stopColor="#dfceb4" />
                   </linearGradient>
                   <linearGradient id="paperGradBottom" x1="50%" y1="100%" x2="50%" y2="0%">
-                    <stop offset="0%" stopColor="#deebf4" />
-                    <stop offset="60%" stopColor="#edf4fa" />
-                    <stop offset="100%" stopColor="#fbfdff" />
+                    <stop offset="0%" stopColor="#e2d2ba" />
+                    <stop offset="60%" stopColor="#f1e7d8" />
+                    <stop offset="100%" stopColor="#fffaf1" />
                   </linearGradient>
                 </defs>
 
@@ -270,9 +284,9 @@ export default function EnvelopeReveal({ onOpen }) {
                           <image href="/assets/decorations/parchment-texture.webp" width="260" height="260" preserveAspectRatio="none" opacity="0.3" />
                         </pattern>
                         <linearGradient id="topFlapGrad" x1="50%" y1="0%" x2="50%" y2="100%">
-                          <stop offset="0%" stopColor="#ffffff" />
-                          <stop offset="60%" stopColor="#f3f7fb" />
-                          <stop offset="100%" stopColor="#dfeaf3" />
+                          <stop offset="0%" stopColor="#fffaf1" />
+                          <stop offset="60%" stopColor="#f3eadc" />
+                          <stop offset="100%" stopColor="#dfceb4" />
                         </linearGradient>
                         <filter id="topFlapDrop" x="-10%" y="-10%" width="120%" height="150%">
                           <feDropShadow dx="0" dy="8" stdDeviation="10" floodColor="#06294f" floodOpacity="0.24" />
@@ -293,11 +307,11 @@ export default function EnvelopeReveal({ onOpen }) {
                     <svg viewBox="0 0 540 200" preserveAspectRatio="none" className="flap-svg-back">
                       <defs>
                         <pattern id="linerPattern" width="240" height="240" patternUnits="userSpaceOnUse">
-                          <image href="/assets/decorations/envelope-liner.webp" width="240" height="240" preserveAspectRatio="xMidYMid slice" opacity="0.96" />
+                          <image href="/assets/florals/emerald-rose-corner.webp" width="240" height="240" preserveAspectRatio="xMidYMid slice" opacity="0.92" />
                         </pattern>
                       </defs>
                       {/* Back paper substrate */}
-                      <path d="M 0,0 L 270,192 L 540,0 Z" fill="#eff5fa" />
+                      <path d="M 0,0 L 270,192 L 540,0 Z" fill="#0a3527" />
                       {/* Floral liner with 12px inset framing */}
                       <path d="M 16,3 L 270,183 L 524,3 Z" fill="url(#linerPattern)" />
                       {/* Gilded hairline border surrounding the liner */}
@@ -324,12 +338,9 @@ export default function EnvelopeReveal({ onOpen }) {
                       : { duration: 4.2, repeat: Infinity, ease: 'easeInOut' }
                   }
                 >
-                  <img
-                    src="/assets/decorations/wax-seal-royale.webp"
-                    alt="Royal Wax Seal"
-                    className="wax-seal-img"
-                    draggable={false}
-                  />
+                  <div className="wax-seal-medallion" aria-hidden="true">
+                    <span>H</span><i /><span>A</span>
+                  </div>
                   <span className="wax-seal-shine" aria-hidden="true" />
                 </motion.div>
               </div>
@@ -355,5 +366,3 @@ export default function EnvelopeReveal({ onOpen }) {
     </AnimatePresence>
   )
 }
-
-

@@ -31,7 +31,10 @@ export default function App() {
       <EnvelopeReveal onOpen={() => setOpened(true)} />
       <AnimatePresence>
         {opened && (
+          <>
+          <a className="skip-link" href="#main-content">Skip to invitation</a>
           <motion.main
+            id="main-content"
             className="site-content is-open"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -43,6 +46,7 @@ export default function App() {
             <Story />
             <Footer />
           </motion.main>
+          </>
         )}
       </AnimatePresence>
     </div>

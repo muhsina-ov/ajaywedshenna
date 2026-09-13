@@ -102,9 +102,9 @@ def build_og_image(photo_path, crop_box, output_path):
     text_center(116, "W E D D I N G   I N V I T A T I O N", font_cinzel_xs, GOLD_ACCENT)
 
     # Couple Names
-    text_center(144, "AJAY BABU", font_cinzel_lg, NAVY_DEEP)
+    text_center(144, "HENNA PRATHAP", font_cinzel_lg, NAVY_DEEP)
     text_center(196, "and", font_script, GOLD_ACCENT)
-    text_center(232, "HENNA PRATHAP", font_cinzel_lg, NAVY_DEEP)
+    text_center(232, "AJAY BABU", font_cinzel_lg, NAVY_DEEP)
 
     # Gold ornamental divider
     orn_div = 'invitation/public/assets/decorations/ornament-divider.png'

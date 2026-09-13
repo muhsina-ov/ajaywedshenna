@@ -8,7 +8,7 @@ export default function VideoSection() {
     <section id="film" className="video-section" aria-labelledby="video-title">
       <AnimatedAsset
         className="video-floral video-floral-tl"
-        src="/assets/florals/grand-corner.webp"
+        src="/assets/florals/emerald-rose-corner.webp"
         from="left"
         delay={0.1}
         drift={6}
@@ -16,7 +16,7 @@ export default function VideoSection() {
       />
       <AnimatedAsset
         className="video-floral video-floral-br"
-        src="/assets/florals/grand-corner.webp"
+        src="/assets/florals/emerald-rose-corner.webp"
         from="right"
         delay={0.2}
         drift={6}
@@ -35,7 +35,7 @@ export default function VideoSection() {
           <h2 id="video-title" className="video-heading">
             A Prelude To Forever
           </h2>
-          <p className="video-subtitle">The Story of Ajay &amp; Henna</p>
+          <p className="video-subtitle">The Story of Henna &amp; Ajay</p>
           <div className="invitation-divider" aria-hidden="true">
             <span />❦<span />
           </div>
@@ -55,7 +55,7 @@ export default function VideoSection() {
             <div className="video-embed-frame">
               <iframe
                 src="https://www.youtube-nocookie.com/embed/tH5BRKexSZk?rel=0&modestbranding=1"
-                title="Ajay & Henna Wedding Film"
+                title="Henna & Ajay Wedding Film"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
                 loading="lazy"
@@ -78,7 +78,7 @@ export default function VideoSection() {
             className="video-yt-btn"
             whileHover={reduceMotion ? undefined : { scale: 1.04, y: -2 }}
             whileTap={{ scale: 0.97 }}
-            aria-label="Watch Ajay & Henna's video on YouTube"
+            aria-label="Watch Henna & Ajay's video on YouTube"
           >
             <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
               <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />

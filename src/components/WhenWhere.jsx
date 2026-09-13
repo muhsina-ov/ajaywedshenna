@@ -8,8 +8,8 @@ export default function WhenWhere() {
 
   return (
     <section className="occasion-section" id="details" aria-labelledby="occasion-heading">
-      <AnimatedAsset className="occasion-floral occasion-floral-left" src="/assets/florals/side-spray.webp" from="left" drift={10} duration={8} />
-      <AnimatedAsset className="occasion-floral occasion-floral-right" src="/assets/florals/side-spray.webp" from="right" delay={0.12} drift={12} duration={9} />
+      <AnimatedAsset className="occasion-floral occasion-floral-left" src="/assets/florals/emerald-rose-corner.webp" from="left" drift={10} duration={8} />
+      <AnimatedAsset className="occasion-floral occasion-floral-right" src="/assets/florals/emerald-rose-corner.webp" from="right" delay={0.12} drift={12} duration={9} />
       <AnimatedAsset className="occasion-silk" src="/assets/florals/silk-ribbon.webp" from="left" delay={0.2} drift={14} rotate={0.6} duration={10} />
       <motion.div className="section-heading" initial={reduceMotion ? false : { opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.5 }} transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}>
         <p>He has made everything beautiful in his time.</p>
@@ -66,7 +66,7 @@ export default function WhenWhere() {
         ))}
       </div>
 
-      <AnimatedAsset className="occasion-corner" src="/assets/florals/grand-corner.webp" from="right" delay={0.2} drift={9} duration={9} />
+      <AnimatedAsset className="occasion-corner" src="/assets/florals/emerald-rose-corner.webp" from="right" delay={0.2} drift={9} duration={9} />
     </section>
   )
 }
