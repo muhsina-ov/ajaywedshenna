@@ -59,12 +59,12 @@ export const STORY = {
 
 export const FAMILY = {
   text: 'With warm regards',
-  names: ['Babu George', 'Geena Babu', 'Ajay Babu', 'Anjitha Babu'],
+  names: ['Prathap Chungath', 'Romia Prathap', 'Henna Prathap', 'Hevanna Prathap'],
 }
 
 export const CONTACTS = [
-  { name: 'Babu George', phone: '9446216743', tel: '+919446216743' },
-  { name: 'Ajay', phone: '9778599291', tel: '+919778599291' },
+  { name: 'Prathap Chungath', phone: '75930 96668', tel: '+917593096668' },
+  { name: 'Kiran Chettan', phone: '94467 63023', tel: '+919446763023' },
 ]
 
 const formatCalendarDate = (date) => date.toISOString().replace(/[-:]/g, '').split('.')[0] + 'Z'
