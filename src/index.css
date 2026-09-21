@@ -2926,6 +2926,37 @@ button:focus-visible {
   letter-spacing: .13em;
   text-wrap: balance;
 }
+.hero-solemnized {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  margin: 1.15rem auto 0.5rem;
+  text-align: center;
+}
+.hero-solemnized-label {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: clamp(0.82rem, 1.4vw, 1rem);
+  color: var(--gold-light, #e2bd75);
+  letter-spacing: 0.05em;
+}
+.hero-solemnized-name {
+  font-family: var(--display);
+  font-size: clamp(0.98rem, 1.9vw, 1.25rem);
+  font-weight: 600;
+  color: #fffaf0;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+.hero-solemnized-title {
+  font-family: var(--display);
+  font-size: clamp(0.72rem, 1.2vw, 0.85rem);
+  color: var(--gold, #c5a059);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
 .invitation-hero > .hero-copy > .invitation-divider:last-child { margin-top: 2.35rem; }
 
 @media (max-width: 600px) {

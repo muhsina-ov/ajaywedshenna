@@ -77,12 +77,12 @@ export default function Footer() {
           <div className="crest crest-small" aria-hidden="true">
             <span>H</span><i /><span>A</span>
           </div>
-          <p>With Love &amp; Joy</p>
+          <p>With the blessings of God,</p>
           <h2>{COUPLE.brideShort} <em>&amp;</em> {COUPLE.groomShort}</h2>
-          <strong>04 October 2026</strong>
+          <strong>28 September 2026</strong>
 
           {/* Royal Highlighted Countdown & Calendar Card */}
-          <div className="closing-countdown-card" aria-label="Countdown to the wedding ceremony">
+          <div className="closing-countdown-card" aria-label="Countdown to the betrothal ceremony">
             <span className="closing-countdown-kicker">Counting Down To Our Big Day</span>
             <div className="closing-countdown-divider" aria-hidden="true">
               <span />❦<span />
@@ -173,7 +173,7 @@ export default function Footer() {
                     whileHover={reduceMotion ? undefined : { scale: 1.02 }}
                   >
                     <div className="closing-direction-icon" aria-hidden="true">
-                      {occasion.id === 'matrimony' ? (
+                      {occasion.id === 'matrimony' || occasion.id === 'betrothal' ? (
                         <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" strokeWidth="1.8">
                           <path d="M12 2v6M9 5h6M4 22h16M5 22V11l7-5 7 5v11M10 22v-5a2 2 0 014 0v5" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
@@ -185,7 +185,7 @@ export default function Footer() {
                     </div>
                     <div className="closing-direction-info">
                       <strong className="closing-direction-type">
-                        {occasion.id === 'matrimony' ? 'Church Ceremony' : 'Wedding Reception'}
+                        {occasion.id === 'matrimony' || occasion.id === 'betrothal' ? 'Betrothal Ceremony' : 'Reception'}
                       </strong>
                       <span className="closing-direction-place">{occasion.venue}</span>
                       <span className="closing-direction-city">{occasion.location}</span>

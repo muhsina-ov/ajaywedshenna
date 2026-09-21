@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { WEDDING_DATE } from '../data'
+import { CEREMONY_DATE } from '../data'
 import { OrnamentHeader } from './Decorations'
 
 function FlipUnit({ value, label }) {
@@ -20,7 +20,7 @@ function FlipUnit({ value, label }) {
 }
 
 function getTimeLeft(target) {
-  const diff = Math.max(0, target - Date.now())
+  const diff = Math.max(0, (target ? target.getTime() : Date.now()) - Date.now())
   return {
     days: Math.floor(diff / (1000 * 60 * 60 * 24)),
     hours: Math.floor((diff / (1000 * 60 * 60)) % 24),
@@ -30,10 +30,10 @@ function getTimeLeft(target) {
 }
 
 export default function Countdown() {
-  const [time, setTime] = useState(getTimeLeft(WEDDING_DATE))
+  const [time, setTime] = useState(() => getTimeLeft(CEREMONY_DATE))
 
   useEffect(() => {
-    const id = setInterval(() => setTime(getTimeLeft(WEDDING_DATE)), 1000)
+    const id = setInterval(() => setTime(getTimeLeft(CEREMONY_DATE)), 1000)
     return () => clearInterval(id)
   }, [])
 
@@ -68,7 +68,7 @@ export default function Countdown() {
         </div>
 
         <p className="mt-8 font-serif text-sm text-navy/60 italic">
-          04 October 2026 · 6:30 PM onwards
+          28 September 2026 · 3:00 PM
         </p>
       </motion.div>
     </section>

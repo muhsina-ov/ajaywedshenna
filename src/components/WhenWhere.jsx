@@ -12,7 +12,7 @@ export default function WhenWhere() {
       <AnimatedAsset className="occasion-floral occasion-floral-right" src="/assets/florals/emerald-rose-corner.webp" from="right" delay={0.12} drift={12} duration={9} />
       <AnimatedAsset className="occasion-silk" src="/assets/florals/silk-ribbon.webp" from="left" delay={0.2} drift={14} rotate={0.6} duration={10} />
       <motion.div className="section-heading" initial={reduceMotion ? false : { opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.5 }} transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}>
-        <p>He has made everything beautiful in his time.</p>
+        <p>“He has made everything beautiful in its time.”</p>
         <h2 id="occasion-heading">Ecclesiastes 3:11</h2>
       </motion.div>
 
@@ -26,7 +26,7 @@ export default function WhenWhere() {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.65, delay: index * 0.12 }}
           >
-            {occasion.id === 'matrimony' && <ChurchSilhouette />}
+            {(occasion.id === 'matrimony' || occasion.id === 'betrothal') && <ChurchSilhouette />}
             {occasion.id === 'reception' && <ConventionCentreSilhouette />}
             <motion.div variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.085 } } }} initial={reduceMotion ? 'visible' : 'hidden'} whileInView="visible" viewport={{ once: true, amount: 0.35 }}>
               <motion.span variants={{ hidden: { opacity: 0, y: 12 }, visible: { opacity: 1, y: 0 } }} className="occasion-index">0{index + 1}</motion.span>

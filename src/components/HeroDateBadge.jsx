@@ -81,7 +81,7 @@ export default function HeroDateBadge({ className = '' }) {
     <div
       className={`hero-royal-badges ${className}`}
       role="region"
-      aria-label="Wedding Date: Sunday, 04 October 2026 at 3:00 PM. Reception: 6:30 PM Onwards"
+      aria-label="Betrothal Date: Monday, 28 September 2026 at 3:00 PM. Reception: 6:30 PM Onwards"
     >
       {/* Top Ceremony Plaque */}
       <motion.div
@@ -132,18 +132,18 @@ export default function HeroDateBadge({ className = '' }) {
             />
           </g>
 
-          {/* Left Column: OCTOBER / 2026 */}
+          {/* Left Column: SEPTEMBER / 2026 */}
           <g transform="translate(133, 63)">
             <text
               y="-13"
               textAnchor="middle"
               fill="#0F2449"
               fontFamily="Cinzel, Georgia, serif"
-              fontSize="17.5"
+              fontSize="16"
               fontWeight="600"
-              letterSpacing="1.8"
+              letterSpacing="1.2"
             >
-              OCTOBER
+              SEPTEMBER
             </text>
             <line x1="-50" y1="-2.5" x2="50" y2="-2.5" stroke="#C59338" strokeWidth="1.8" />
             <circle cx="0" cy="-2.5" r="3.5" fill="#C59338" />
@@ -163,7 +163,7 @@ export default function HeroDateBadge({ className = '' }) {
           {/* Vertical Divider 1 */}
           <line x1="216" y1="20" x2="216" y2="106" stroke="#0F2449" strokeWidth="2" opacity="0.95" />
 
-          {/* Center Column: 04 / on Sunday */}
+          {/* Center Column: 28 / on Monday */}
           <g transform="translate(315, 63)">
             {/* Left Floral Accent */}
             <image
@@ -174,7 +174,7 @@ export default function HeroDateBadge({ className = '' }) {
               height="24"
               preserveAspectRatio="xMidYMid meet"
             />
-            {/* Center Number 04 (Playfair Display for authentic thick-serif stems) */}
+            {/* Center Number 28 (Playfair Display for authentic thick-serif stems) */}
             <text
               y="-4"
               textAnchor="middle"
@@ -184,7 +184,7 @@ export default function HeroDateBadge({ className = '' }) {
               fontWeight="800"
               letterSpacing="-0.5"
             >
-              04
+              28
             </text>
             {/* Right Floral Accent (Mirrored) */}
             <g transform="translate(66, -16) scale(-1, 1)">
@@ -197,7 +197,7 @@ export default function HeroDateBadge({ className = '' }) {
                 preserveAspectRatio="xMidYMid meet"
               />
             </g>
-            {/* Script Text: on Sunday */}
+            {/* Script Text: on Monday */}
             <text
               y="28"
               textAnchor="middle"
@@ -206,7 +206,7 @@ export default function HeroDateBadge({ className = '' }) {
               fontSize="28"
               fontStyle="italic"
             >
-              on Sunday
+              on Monday
             </text>
           </g>
 
@@ -313,50 +313,63 @@ export default function HeroDateBadge({ className = '' }) {
           <polygon points="434,163 445,174 434,185 423,174" fill="url(#receptionGold)" />
           <rect x="454" y="173.25" width="244" height="1.5" fill="url(#receptionGold)" />
 
-          {/* ADLUX INTERNATIONAL CONVENTION CENTER, */}
+          {/* TELCON INTERNATIONAL */}
           <text
             x="434"
-            y="228"
+            y="222"
             textAnchor="middle"
             fill="#0F2449"
             fontFamily="'Cinzel', Georgia, serif"
-            fontSize="24"
+            fontSize="22"
             fontWeight="600"
-            letterSpacing="2.6"
+            letterSpacing="2"
           >
-            ADLUX INTERNATIONAL
+            TELCON INTERNATIONAL
           </text>
           <text
             x="434"
-            y="273"
+            y="260"
             textAnchor="middle"
             fill="#0F2449"
             fontFamily="'Cinzel', Georgia, serif"
-            fontSize="24"
+            fontSize="22"
             fontWeight="600"
-            letterSpacing="2.6"
+            letterSpacing="2"
           >
             CONVENTION CENTER,
           </text>
 
-          {/* ANGAMALY */}
+          {/* PANNITHADAM, THRISSUR DT. */}
           <text
             x="434"
-            y="323"
+            y="298"
             textAnchor="middle"
             fill="#0F2449"
             fontFamily="'Cinzel', Georgia, serif"
-            fontSize="17.5"
+            fontSize="15.5"
             fontWeight="600"
-            letterSpacing="7"
+            letterSpacing="3.5"
           >
-            ANGAMALY
+            PANNITHADAM, THRISSUR DT.
+          </text>
+
+          {/* Dinner to Follow */}
+          <text
+            x="434"
+            y="336"
+            textAnchor="middle"
+            fill="#C59338"
+            fontFamily="'Great Vibes', 'Brush Script MT', cursive"
+            fontSize="27"
+            fontStyle="italic"
+          >
+            Dinner to Follow
           </text>
         </svg>
 
         {/* Accessible screen reader text */}
         <span className="sr-only">
-          Reception: 6:30 PM Onwards at Adlux International Convention Center, Angamaly
+          Reception: 6:30 PM Onwards at Telcon International Convention Center, Pannithadam, Thrissur Dt. Dinner to Follow
         </span>
       </motion.div>
 
@@ -367,7 +380,7 @@ export default function HeroDateBadge({ className = '' }) {
           target="_blank"
           rel="noopener noreferrer"
           className="hero-direction-pill hero-direction-church"
-          aria-label="Get direction to Church (Little Flower Syro-Malabar Church, Kurumassery)"
+          aria-label="Get direction to Church (St. Lazar’s Church, Kottapadi)"
           whileHover={reduceMotion ? undefined : { scale: 1.03, y: -2 }}
           whileTap={{ scale: 0.97 }}
         >
@@ -385,7 +398,7 @@ export default function HeroDateBadge({ className = '' }) {
           target="_blank"
           rel="noopener noreferrer"
           className="hero-direction-pill hero-direction-convention"
-          aria-label="Get direction to Convention Center (Adlux International Convention Centre, Angamaly)"
+          aria-label="Get direction to Convention Center (Telcon International Convention Center, Pannithadam, Thrissur Dt.)"
           whileHover={reduceMotion ? undefined : { scale: 1.03, y: -2 }}
           whileTap={{ scale: 0.97 }}
         >

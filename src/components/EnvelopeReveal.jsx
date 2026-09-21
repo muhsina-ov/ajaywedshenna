@@ -137,9 +137,9 @@ export default function EnvelopeReveal({ onOpen }) {
             animate={{ opacity: phase === 'sealed' ? 1 : 0, y: phase === 'sealed' ? 0 : -10 }}
             transition={{ duration: 0.65, delay: 0.15 }}
           >
-            <span>Wedding invitation</span>
+            <span>Betrothal invitation</span>
             <h1>Henna <em>&amp;</em> Ajay</h1>
-            <p>04 · October · 2026</p>
+            <p>28 · September · 2026</p>
           </motion.header>
 
           <div className="envelope-scene">
@@ -147,7 +147,7 @@ export default function EnvelopeReveal({ onOpen }) {
               type="button"
               className={`envelope-realistic ${phase}`}
               onClick={openInvitation}
-              aria-label="Open Henna and Ajay's royal wedding invitation"
+              aria-label="Open Henna and Ajay's royal betrothal invitation"
               initial={reduceMotion ? false : { opacity: 0, y: 32, scale: 0.95 }}
               animate={{
                 opacity: 1,
@@ -163,7 +163,7 @@ export default function EnvelopeReveal({ onOpen }) {
                 <div className="envelope-pocket-shadow" />
               </div>
 
-              {/* The Letter Card Inside (rises gracefully and reveals the royal wedding invitation) */}
+              {/* The Letter Card Inside (rises gracefully and reveals the royal betrothal invitation) */}
               <motion.div
                 className="envelope-card"
                 initial={false}
@@ -180,16 +180,16 @@ export default function EnvelopeReveal({ onOpen }) {
                 <div
                   className="envelope-letter-art"
                   role="img"
-                  aria-label="Wedding invitation for Henna Prathap and Ajay Babu, Sunday, October 4, 2026"
+                  aria-label="Betrothal invitation for Henna Prathap and Ajay Babu, Monday, September 28, 2026"
                 >
                   <img className="letter-floral letter-floral-tl" src="/assets/florals/emerald-rose-corner.webp" alt="" />
                   <img className="letter-floral letter-floral-br" src="/assets/florals/emerald-rose-corner.webp" alt="" />
                   <div className="letter-inner-frame">
-                    <span className="letter-kicker">Wedding invitation</span>
+                    <span className="letter-kicker">Betrothal invitation</span>
                     <div className="letter-flourish" aria-hidden="true"><i />❦<i /></div>
-                    <p>Together with their families</p>
+                    <p>Together with our family</p>
                     <h2><span>Henna Prathap</span><em>&amp;</em><span>Ajay Babu</span></h2>
-                    <strong>Sunday · 04 October · 2026</strong>
+                    <strong>Monday · 28 September · 2026</strong>
                   </div>
                 </div>
               </motion.div>

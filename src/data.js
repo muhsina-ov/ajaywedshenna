@@ -7,29 +7,29 @@ export const COUPLE = {
   brideShort: 'Henna',
 }
 
-export const CEREMONY_DATE = new Date('2026-10-04T15:00:00+05:30')
+export const CEREMONY_DATE = new Date('2026-09-28T15:00:00+05:30')
 
 export const OCCASIONS = [
   {
-    id: 'matrimony',
-    label: 'Sacrament of Matrimony',
-    date: '04 · October · 2026',
+    id: 'betrothal',
+    label: 'Betrothal Ceremony',
+    date: 'Monday · 28 September · 2026',
     time: '3:00 PM',
-    venue: 'Little Flower Syro-Malabar Church',
-    location: 'Kurumassery',
-    mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Little+Flower+Syro-Malabar+Church+Kurumassery',
-    noteLabel: 'Solemnized by',
-    note: 'His Excellency Mar Antony Kariyil CMI',
-    subtitle: 'Bishop Emeritus, Ernakulam–Angamaly',
+    venue: 'St. Lazar’s Church',
+    location: 'Kottapadi',
+    mapsUrl: 'https://www.google.com/maps/search/?api=1&query=St.+Lazar%27s+Church+Kottapadi',
+    noteLabel: 'will be solemnized by',
+    note: 'His Excellency Mar Bosco Puthur',
+    subtitle: 'Bishop Emeritus, Melbourne',
   },
   {
     id: 'reception',
     label: 'Reception',
-    date: '04 · October · 2026',
+    date: 'Monday · 28 September · 2026',
     time: '6:30 PM onwards',
-    venue: 'Adlux International Convention Centre',
-    location: 'Angamaly',
-    mapsUrl: 'https://maps.app.goo.gl/o31Wgju5P2gMGYuu8',
+    venue: 'Telcon International Convention Center',
+    location: 'Pannithadam, Thrissur Dt.',
+    mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Telcon+International+Convention+Center+Pannithadam+Thrissur',
     note: 'Dinner to Follow',
   },
 ]
@@ -74,14 +74,14 @@ export function generateICS() {
     {
       start: CEREMONY_DATE,
       end: new Date(CEREMONY_DATE.getTime() + 2 * 60 * 60 * 1000),
-      title: 'Henna & Ajay - Sacrament of Matrimony',
-      location: 'Little Flower Syro-Malabar Church, Kurumassery',
+      title: 'Henna & Ajay - Betrothal Ceremony',
+      location: 'St. Lazar’s Church, Kottapadi',
     },
     {
-      start: new Date('2026-10-04T18:30:00+05:30'),
-      end: new Date('2026-10-04T22:30:00+05:30'),
-      title: 'Henna & Ajay - Wedding Reception',
-      location: 'Adlux International Convention Centre, Angamaly',
+      start: new Date('2026-09-28T18:30:00+05:30'),
+      end: new Date('2026-09-28T22:30:00+05:30'),
+      title: 'Henna & Ajay - Reception',
+      location: 'Telcon International Convention Center, Pannithadam, Thrissur Dt.',
     },
   ]
 
@@ -94,12 +94,12 @@ export function generateICS() {
     'END:VEVENT',
   ])
 
-  const ics = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//HennaAjay//Wedding//EN', ...calendarEvents, 'END:VCALENDAR'].join('\r\n')
+  const ics = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//HennaAjay//Betrothal//EN', ...calendarEvents, 'END:VCALENDAR'].join('\r\n')
   const blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' })
   const url = URL.createObjectURL(blob)
   const anchor = document.createElement('a')
   anchor.href = url
-  anchor.download = 'henna-weds-ajay.ics'
+  anchor.download = 'henna-and-ajay-betrothal.ics'
   anchor.click()
   URL.revokeObjectURL(url)
 }
