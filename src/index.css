@@ -2840,8 +2840,8 @@ button:focus-visible {
   padding: clamp(7.5rem, 10vw, 9rem) clamp(2rem, 6vw, 5rem) clamp(6.5rem, 9vw, 8rem);
 }
 .invitation-hero .hero-top-quote {
-  margin-bottom: clamp(2.25rem, 5vw, 3.5rem);
-  gap: .55rem;
+  margin-bottom: 0.65rem;
+  gap: .45rem;
 }
 .invitation-hero .hero-top-quote-text {
   max-width: 38rem;
@@ -2854,14 +2854,14 @@ button:focus-visible {
   letter-spacing: .3em;
 }
 .invitation-hero .hero-top-quote .invitation-divider {
-  margin-top: clamp(1.65rem, 3vw, 2.35rem);
+  margin-top: 0.65rem;
 }
 .invitation-hero .crest-wrap {
   position: relative;
-  width: 15rem;
-  height: 12.5rem;
+  width: 14rem;
+  height: 9.8rem;
   max-width: 62vw;
-  margin: 0 auto 1.5rem;
+  margin: -0.25rem auto 1.1rem;
 }
 .invitation-hero .crest-wrap::before,
 .invitation-hero .crest-wrap::after {
@@ -2931,6 +2931,35 @@ button:focus-visible {
   letter-spacing: .13em;
   text-wrap: balance;
 }
+.hero-betrothal-highlight {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin: 0.65rem auto 0.25rem;
+  padding: 0.42rem 1.35rem;
+  border-radius: 999px;
+  background: radial-gradient(ellipse at 50% 50%, rgba(212, 179, 110, 0.2) 0%, rgba(3, 29, 22, 0.68) 100%);
+  border: 1px solid rgba(223, 177, 91, 0.65);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35), inset 0 0 16px rgba(223, 177, 91, 0.16), 0 0 14px rgba(223, 177, 91, 0.28);
+  transition: all 0.3s ease;
+}
+.hero-betrothal-highlight .betrothal-highlight-text {
+  font-family: var(--display);
+  font-size: clamp(0.95rem, 2.2vw, 1.35rem);
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #FFF3DB;
+  text-shadow: 0 0 16px rgba(243, 207, 122, 0.65), 0 2px 4px rgba(0, 0, 0, 0.5);
+  line-height: 1.2;
+}
+.hero-betrothal-highlight .betrothal-highlight-decor {
+  font-size: 0.85rem;
+  color: var(--gold-bright, #ffd27d);
+  filter: drop-shadow(0 0 6px rgba(243, 207, 122, 0.7));
+  line-height: 1;
+}
 .hero-solemnized {
   display: flex;
   flex-direction: column;
@@ -2966,17 +2995,18 @@ button:focus-visible {
 
 @media (max-width: 600px) {
   .invitation-hero .hero-copy { padding: 5rem 1rem 4.5rem; max-width: 100vw; }
-  .invitation-hero .hero-top-quote { margin-bottom: 0.75rem; }
+  .invitation-hero .hero-top-quote { margin-bottom: 0.25rem; }
   .invitation-hero .hero-top-quote-text {
     font-size: clamp(0.92rem, 3.8vw, 1.15rem);
     max-width: 18.5rem;
     line-height: 1.4;
   }
-  .invitation-hero .hero-top-quote .invitation-divider { margin-top: 0.65rem; }
+  .invitation-hero .hero-top-quote .invitation-divider { margin-top: 0.45rem; }
   .invitation-hero .crest-wrap {
-    width: 10.5rem;
-    height: 8rem;
-    margin-bottom: 0.65rem;
+    width: 9.5rem;
+    height: 7.2rem;
+    margin-top: -0.35rem;
+    margin-bottom: 0.5rem;
   }
   .invitation-hero .crest-wrap .emerald-monogram {
     width: 6.5rem;
@@ -2997,25 +3027,51 @@ button:focus-visible {
     font-size: .64rem;
     letter-spacing: .08em;
   }
+  .hero-betrothal-highlight {
+    padding: 0.35rem 0.9rem;
+    margin: 0.5rem auto 0.2rem;
+    gap: 0.4rem;
+    max-width: 92%;
+  }
+  .hero-betrothal-highlight .betrothal-highlight-text {
+    font-size: clamp(0.72rem, 3.2vw, 0.92rem);
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+  }
+  .hero-betrothal-highlight .betrothal-highlight-decor {
+    font-size: 0.68rem;
+  }
   .hero-solemnized {
     margin: 0.85rem auto 0.4rem;
     gap: 0.2rem;
   }
   .hero-solemnized-name {
-    font-size: clamp(0.78rem, 3.7vw, 1.05rem);
-    letter-spacing: 0.04em;
+    font-size: clamp(0.7rem, 3.1vw, 0.88rem);
+    letter-spacing: 0.025em;
     white-space: nowrap;
   }
   .hero-solemnized-title {
-    font-size: 0.64rem;
-    letter-spacing: 0.1em;
+    font-size: 0.62rem;
+    letter-spacing: 0.08em;
   }
 }
 
 @media (max-width: 380px) {
-  .invitation-hero .hero-copy { padding: 5rem 0.9rem 4.2rem; }
+  .invitation-hero .hero-copy { padding: 4.8rem 0.8rem 4rem; }
   .invitation-hero h1 {
-    font-size: clamp(1.22rem, 6vw, 1.55rem);
+    font-size: clamp(1.18rem, 5.6vw, 1.45rem);
   }
-  .invitation-hero h1 em { font-size: 2.2rem; }
+  .invitation-hero h1 em { font-size: 2rem; }
+  .hero-betrothal-highlight {
+    padding: 0.3rem 0.65rem;
+    gap: 0.3rem;
+  }
+  .hero-betrothal-highlight .betrothal-highlight-text {
+    font-size: 0.68rem;
+    letter-spacing: 0.06em;
+  }
+  .hero-solemnized-name {
+    font-size: 0.66rem;
+    letter-spacing: 0.015em;
+  }
 }

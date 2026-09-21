@@ -37,7 +37,11 @@ export default function Hero() {
         <p className="hero-invitation">
           <span className="hero-invitation-line">Together with our family</span>
           <span className="hero-invitation-line">we invite you and your family to grace</span>
-          <span className="hero-invitation-line">the Betrothal ceremony</span>
+          <span className="hero-betrothal-highlight">
+            <span className="betrothal-highlight-decor" aria-hidden="true">❦</span>
+            <span className="betrothal-highlight-text">The Betrothal Ceremony</span>
+            <span className="betrothal-highlight-decor" aria-hidden="true">❦</span>
+          </span>
         </p>
         <div className="hero-solemnized">
           <span className="hero-solemnized-label">will be solemnized by</span>
