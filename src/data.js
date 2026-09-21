@@ -1,4 +1,4 @@
-export const SITE_URL = 'https://ajay-and-henna.invitingyou.top'
+export const SITE_URL = 'https://henna-weds-ajay.invitingyou.top'
 
 export const COUPLE = {
   groom: 'Ajay Babu',

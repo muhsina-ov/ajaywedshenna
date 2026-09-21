@@ -99,7 +99,7 @@ def build_og_image(photo_path, crop_box, output_path):
         return y + (bbox[3] - bbox[1])
 
     # Eyebrow
-    text_center(116, "W E D D I N G   I N V I T A T I O N", font_cinzel_xs, GOLD_ACCENT)
+    text_center(116, "B E T R O T H A L   I N V I T A T I O N", font_cinzel_xs, GOLD_ACCENT)
 
     # Couple Names
     text_center(144, "HENNA PRATHAP", font_cinzel_lg, NAVY_DEEP)
@@ -133,13 +133,13 @@ def build_og_image(photo_path, crop_box, output_path):
         x = int(card_x + (card_w - tw) / 2)
         draw.text((x, y), text, font=font, fill=fill)
 
-    card_center(card_y + 14, "SUNDAY  •  04 OCTOBER 2026", font_cinzel_md, NAVY_INK)
-    card_center(card_y + 50, "SACRAMENT OF MATRIMONY  &  RECEPTION", font_cinzel_xs, GOLD_ACCENT)
-    card_center(card_y + 74, "Little Flower Church, Kurumassery • 3:00 PM", font_playfair, TEXT_MUTED)
-    card_center(card_y + 98, "Adlux Convention Centre, Angamaly • 6:30 PM", font_playfair, TEXT_MUTED)
+    card_center(card_y + 14, "MONDAY  •  28 SEPTEMBER 2026", font_cinzel_md, NAVY_INK)
+    card_center(card_y + 50, "BETROTHAL CEREMONY  &  RECEPTION", font_cinzel_xs, GOLD_ACCENT)
+    card_center(card_y + 74, "St. Lazar’s Church, Kottapadi • 3:00 PM", font_playfair, TEXT_MUTED)
+    card_center(card_y + 98, "Telcon Convention Center, Pannithadam • 6:30 PM", font_playfair, TEXT_MUTED)
 
     # Production Link Pill
-    url_str = "ajay-and-henna.invitingyou.top"
+    url_str = "henna-weds-ajay.invitingyou.top"
     bbox = draw.textbbox((0, 0), url_str, font=font_url)
     tw = bbox[2] - bbox[0]
     pill_w = max(350, tw + 48)
